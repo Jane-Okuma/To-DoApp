@@ -1,0 +1,156 @@
+@media screen and (max-width: 1024px){
+    body #delete, body #saveChanges, body #submit, body #closebtn{
+        padding: 8px 4px;
+    }
+}
+
+body{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main input, #main textarea, #main2 input, #main2 textarea{
+    width: 97%;
+    padding: px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+}
+
+#main label, p, #main2 label{
+    color: #424242;
+    font-weight: bold;
+}
+
+.prioritySpec label, .status label, .prioritySpec2 label, .status2 label{
+    color: #424242;
+    font-weight: normal;
+}
+label, p{
+    font-weight: bold;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+#submit, #saveChanges{
+    background-color: #ffc310;
+    color: #424242;
+    font-weight: bold;
+    border: none;
+    padding: 10px 24px;
+    cursor: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+}
+
+#delete{
+    background-color: tomato;
+    color: #424242;
+    font-weight: bold;
+    border: none;
+    padding: 10px 24px;
+    cursor: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+}
+
+#closebtn{
+    background-color: #e0e0e0;
+    color: #424242;
+    font-weight: bold;
+    border: 2px solid #757575;
+    padding: 10px 24px;
+    cursor: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+    
+}
+
+#modal-content, #displayDetails{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-left: 8px;
+    transition: 0.5s;
+    display: none;
+}
+
+#display{
+    transition: margin-left .5s;
+    padding: 20px;
+    font-size: 16px;
+    color: #424242;
+}
+
+
+#main label, #main input{
+    display: block;
+}
+
+#addTaskForm{
+    margin-top: 20px;
+}
+
+#taskTable{
+    width: 100%;
+}
+td{
+    border-top: 1px solid #757575;
+    border-collapse: collapse;
+    height: 2.5rem;
+    
+}
+
+#addTask{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: white;
+    color: #424242;
+}
+.taskListLabel{
+    font-size: 18px;
+}
+
+#priorityName, #dueDate{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #757575;
+}
+
+#calendar{
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #757575;
+
+}
+
+#dueDate{
+    margin-left: 8px;
+}
+
+#prioritySquare{
+    margin-left: 17px;
+}
+
+#priorityName{
+    margin-left: 8px;
+}

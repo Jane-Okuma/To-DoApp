@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>dashboard</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./dashboard.css" />
+        
+    </head>
+    <body>
+        <!--Table that contains info of tasks(Title, due date(if any), priority level(if any)) stored in local storage-->
+        <div id="display">
+            <h1>All Tasks</h1>
+            <br>
+            <table class="table table-hover" id="taskTable">
+                <tbody>
+                    <tr>
+                        <td ><i class="fa-solid fa-plus fa-xlg" id="add"> <button id="addTask" onclick="openAddTask()">Add New Task</button></i></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Form that allows user create a new task-->
+        <div id="modal-content">
+            <form id="addTaskForm">
+                <h2>Add Task</h2>
+                <div id="main">
+                    <label for="title"></label>
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+
+                    <label for="description"></label>
+                    <textarea id="description" name="description" placeholder="Description"></textarea>
+
+                    <label for="startDate">Start Date</label>
+                    <input type="datetime-local" name="startDate" id="startDate" required>
+
+                    <label for="endDate">Due Date</label>
+                    <input type="datetime-local" name="dueDate" id="endDate" required>
+                </div>
+
+                <p>Priority</p>
+                <div class="prioritySpec">
+                    <label for="high">High</label>
+                    <input type="radio" name="prioritySpec" id="high" value="high">
+
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="prioritySpec" id="medium" value="medium">
+
+                    <label for="low">Low</label>
+                    <input type="radio" name="prioritySpec" id="low" value="low">
+
+                    <label for="optional">Optional</label>
+                    <input type="radio" name="prioritySpec" id="optional" value="optional">
+                </div>
+                
+                <p>Status</p>
+                <div class="status">
+                    <label for="notstarted">Not Started</label>
+                    <input type="radio" id="notstarted" name="status" value="Not Started">
+
+                    <label for="inprogress">In Progress</label>
+                    <input type="radio" id="inprogress" name="status" value="In Progress">
+
+                    <label for="completed">Completed</label>
+                    <input type="radio" id="completed" name="status" value="Completed">
+                </div>
+
+                <div id="buttons">
+                    <button id="closebtn" onclick="closeAddTask()">Cancel</button>
+                    <button id="submit">Save Task</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Form that displays task details and allows the user delete task oredit information-->
+        <div id="displayDetails">
+            <form id="taskDetails">
+                <h2>Task Details</h2>
+                <div id="main2">
+                    <label for="title2"></label>
+                    <input type="text" id="title2" name="title2">
+
+                    <label for="description2"></label>
+                    <textarea id="description2" name="description2"></textarea>
+
+                    <label for="startDate2">Start Date</label>
+                    <input type="datetime-local" id="startDate2" name="startDate2">
+
+                    <label for="endDate2">Due Date</label>
+                    <input type="datetime-local" id="endDate2" name="dueDate">
+                </div>
+
+                <p>Priority</p>
+                <div class="prioritySpec2">
+                    <label for="high">High</label>
+                    <input type="radio" name="prioritySpec2" id="high" value="high">
+
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="prioritySpec2" id="medium" value="medium">
+
+                    <label for="low">Low</label>
+                    <input type="radio" name="prioritySpec2" id="low" value="low">
+
+                    <label for="optional">Optional</label>
+                    <input type="radio" name="prioritySpec2" id="optional" value="optional">
+                </div>
+                
+                <p>Status</p>
+                <div class="status2">
+                    <label for="notstarted">Not Started</label>
+                    <input type="radio" id="notstarted" name="status2" value="Not Started">
+
+                    <label for="inprogress">In Progress</label>
+                    <input type="radio" id="inprogress" name="status2" value="In Progress">
+
+                    <label for="completed">Completed</label>
+                    <input type="radio" id="completed" name="status2" value="Completed">
+                </div>
+
+                <div id="buttons">
+                    <button id="closebtn" onclick="closeAddTask()">Cancel</button>
+                    <button id="delete">Delete</button>
+                    <button id="saveChanges">Save Changes</button>
+                </div>
+            </form>
+        </div>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="./dashboard.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+    </body>
+</html>
